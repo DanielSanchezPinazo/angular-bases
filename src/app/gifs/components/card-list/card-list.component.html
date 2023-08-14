@@ -1,0 +1,20 @@
+
+<div class="row">
+<!-- "col-md-3" quiere decir que en pantallas medianas divida el div(row) en 3 posiciones(columnas) -->
+<!-- "col-sm-6" quiere decir que en pantallas pequeñas ocupe 6 (de las 12 que boostrap divide el row)-->
+  <div *ngFor="let gif of cardList" class="col-md-3 col-sm-6">
+    <div class="text-center card mb-2 bg-dark">
+      <!-- TODO: Crear imagen -->
+<!-- Se usan [] para decirle a Angular que el valor de algún atributo de algun elemento html es igual a una expresión de JS (binding del valor de una expresión) -->
+      <img
+        [src]="gif.images.downsized_medium.url"
+        [alt]="gif.title"
+        class="card-img-top"
+      >
+      <div class="card-body text-white">
+        <p class="card-text"> {{ gif.title }} </p>
+      </div>
+    </div>
+  </div>
+
+</div>
